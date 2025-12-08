@@ -10,6 +10,7 @@ import "package:movil/providers/auth_provider.dart";
 // Screens
 import 'screens/pantalla_tabla_periodica.dart';
 import 'screens/reconocimiento_lewis_screen.dart';
+import 'screens/lewis_tutorial/lewis_tutorial_screen.dart';
 import 'screens/login/user_profile.dart';
 import 'package:pocketbase/pocketbase.dart';
 
@@ -476,6 +477,19 @@ class SidePeriodicDrawer extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (_) => ReconocimientoLewisScreen(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.book),
+              title: const Text("Tutorial de Lewis"),
+              subtitle: const Text("Aprende sobre estructuras"),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => const LewisTutorialScreen(),
                   ),
                 );
               },
